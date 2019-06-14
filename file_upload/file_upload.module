@@ -1,0 +1,20 @@
+<?php
+
+function file_upload_menu() {
+
+	$items['file-upload'] = array(
+		'title' => 'File Upload',
+		'description' => 'My Sample File Upload',
+		'page callback' => 'drupal_get_form',
+		'page arguments' => array('file_upload_callback'),
+		'file' => 'file_upload.inc',
+		'access arguments' => array('access content'),
+		'type' => MENU_NORMAL_ITEM
+	);
+
+	return $items;
+}
+
+function file_upload_theme() {
+	return array();
+}

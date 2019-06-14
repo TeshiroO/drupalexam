@@ -1,0 +1,5 @@
+name: File Upload Module
+description: Upload file pdf
+package: Custom
+type: module
+core: 8.x
