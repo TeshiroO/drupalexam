@@ -1,6 +1,6 @@
 <?php
 
-function file_upload_callback($form, &$form_state) {
+function file_upload($form, &$form_state) {
 	
 	$form['upload_item'] = array(
 		'#type' => 'file',
@@ -21,15 +21,15 @@ function file_upload_callback($form, &$form_state) {
 	$form['upload_submit'] = array(
 		'#type' => 'submit',
 		'#value' => 'Upload File',
-		'#submit' => array('upload_file_submit_callback')
+		'#submit' => array('upload_file_submit')
 	);
 	
 	return $form;
 	
 }
 
-function upload_file_submit_callback($form, &$form_state) {
-	
+function upload_file_submit($form, &$form_state) {
+
 	$validators = array(
 		'file_validate_extensions' => array("pdf")
 	);
